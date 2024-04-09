@@ -63,6 +63,7 @@ namespace perceptron
             ConsoleKeyInfo key;
             bool running = true;
             bool numericalMode = false;
+            bool commaNow = false;
             do
             {
                 if (numericalMode)
@@ -108,29 +109,54 @@ namespace perceptron
                 }
                 else if (numericalMode && key.Key >= ConsoleKey.D0 && key.Key <= ConsoleKey.D9)
                 {
-                    weights[indexCurrent] = Double.Parse(weights[indexCurrent].ToString() + (key.Key-ConsoleKey.D0));
+                    weights[indexCurrent] = Double.Parse(weights[indexCurrent].ToString() + (commaNow ? "." : "") + (key.Key - ConsoleKey.D0));
                     menu[indexCurrent] = "w" + (indexCurrent + 1) + " = " + weights[indexCurrent];
+                    if (commaNow)
+                    {
+                        commaNow = false;
+                    }
                     Menu(menu, menu[indexCurrent]);
                 }
                 else if (numericalMode && key.Key >= ConsoleKey.NumPad0 && key.Key <= ConsoleKey.NumPad9)
                 {
-                    weights[indexCurrent] = Double.Parse(weights[indexCurrent].ToString() + (key.Key-ConsoleKey.NumPad0));
+                    weights[indexCurrent] = Double.Parse(weights[indexCurrent].ToString() + (commaNow ? "." : "") + (key.Key - ConsoleKey.NumPad0));
                     menu[indexCurrent] = "w" + (indexCurrent + 1) + " = " + weights[indexCurrent];
+                    if (commaNow)
+                    {
+                        commaNow = false;
+                    }
                     Menu(menu, menu[indexCurrent]);
                 }
                 else if (numericalMode && key.Key == ConsoleKey.Backspace)
                 {
-                    try
+                    if (commaNow)
                     {
-                        weights[indexCurrent] = Double.Parse(weights[indexCurrent].ToString()[..^1]);
+                        commaNow = false;
+                        menu[indexCurrent] = "w" + (indexCurrent + 1) + " = " + weights[indexCurrent];
                     }
-                    catch (System.Exception)
+                    else
                     {
-                        weights[indexCurrent] = 0;
-                    }                    
-                    menu[indexCurrent] = "w" + (indexCurrent + 1) + " = " + weights[indexCurrent];
+                        try
+                        {
+                            weights[indexCurrent] = Double.Parse(weights[indexCurrent].ToString()[..^1]);
+                        }
+                        catch (System.Exception)
+                        {
+                            weights[indexCurrent] = 0;
+                        }
+                        menu[indexCurrent] = "w" + (indexCurrent + 1) + " = " + weights[indexCurrent];
+                    }
                     Menu(menu, menu[indexCurrent]);
                 }
+                else if (numericalMode && (key.Key == ConsoleKey.OemPeriod || key.Key == ConsoleKey.OemComma))
+                {
+                    if (!commaNow)
+                    {
+                        commaNow = true;
+                        menu[indexCurrent] = "w" + (indexCurrent + 1) + " = " + weights[indexCurrent] + ".";
+                    }
+                }
+
             }
             while (running);
         }
