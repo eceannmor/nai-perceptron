@@ -1,6 +1,8 @@
 ﻿using perceptron;
 
 Perceptron perceptron;
+Console.ForegroundColor = ConsoleColor.DarkCyan;
+Console.Title = "NAI mini-project \"Perceptron\"";
 
 string[] lines = File.ReadAllLines("./perceptron/data/perceptron.data");
 List<List<String>> input = [];
@@ -76,3 +78,4 @@ do
 while (running);
 Console.Clear();
 Console.WriteLine("*paws at you*\ntnx for using the preceptron simulator~");
+Console.ForegroundColor = ConsoleColor.White;

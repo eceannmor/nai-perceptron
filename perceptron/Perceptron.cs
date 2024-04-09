@@ -86,6 +86,7 @@ namespace perceptron
                 Console.WriteLine();
             }
             Console.WriteLine();
+            Helper.Credit();
             Helper.ExitOnEnter();
         }
 

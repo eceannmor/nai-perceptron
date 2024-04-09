@@ -26,6 +26,7 @@ namespace perceptron
                     Console.Write(" ");
                 Console.WriteLine(item);
             }
+            Credit();
         }
 
         public static void TempNote(string msg)
@@ -171,6 +172,16 @@ namespace perceptron
                 else
                     Console.WriteLine(" " + item);
             }
+            Credit();
+        }
+
+        public static void Credit()
+        {
+            var (Left, Top) = Console.GetCursorPosition();
+            var consoleH = Console.WindowTop + Console.WindowHeight - 1;
+            Console.SetCursorPosition(0, consoleH);
+            Console.Write("Oleksandr Volkdoav, s28021, for PJATK, 2023/2024");
+            Console.SetCursorPosition(Left, Top);
         }
     }
 }
