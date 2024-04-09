@@ -1,0 +1,14 @@
+E:\Projects\University Projects\NAI\NAI\bin\Debug\net8.0\NAI.exe
+E:\Projects\University Projects\NAI\NAI\bin\Debug\net8.0\NAI.deps.json
+E:\Projects\University Projects\NAI\NAI\bin\Debug\net8.0\NAI.runtimeconfig.json
+E:\Projects\University Projects\NAI\NAI\bin\Debug\net8.0\NAI.dll
+E:\Projects\University Projects\NAI\NAI\bin\Debug\net8.0\NAI.pdb
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.AssemblyInfoInputs.cache
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.AssemblyInfo.cs
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.csproj.CoreCompileInputs.cache
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.dll
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\refint\NAI.dll
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.pdb
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\NAI.genruntimeconfig.cache
+E:\Projects\University Projects\NAI\NAI\obj\Debug\net8.0\ref\NAI.dll
