@@ -13,7 +13,7 @@ Exit
 ```
 The menu of the custom weights tab works similarly. Use `Enter` to enter and exit edit mode when focused on one of the weights.  
 When in edit mode, you can use your keyboard to enter new weights.  
-Input is only limited to numbers, decimal point and `Backspace`
+Input is limited to numbers, decimal point and `Backspace`
 ```c
 > w1 = 0.0
 w2 = 0.0
