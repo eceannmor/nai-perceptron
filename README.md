@@ -11,7 +11,8 @@ Use the `Up` and `Down` arrow keys to navigate the menu, press `Enter` to access
 Test the test set
 Exit
 ```
-The menu of the custom weights tab works similarly. Use `Enter` to enter and exit edit mode when focused on one of the weights. When in edit mode, you can use your keyboard to enter new weights.
+The menu of the custom weights tab works similarly. Use `Enter` to enter and exit edit mode when focused on one of the weights.  
+When in edit mode, you can use your keyboard to enter new weights.  
 Input is only limited to numbers, decimal point and `Backspace`
 ```c
 > w1 = 0.0
